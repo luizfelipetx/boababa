@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+    pageEncoding="ISO-8859-1"%><%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ page isELIgnored="false" %>
 <!--[if IE 7]>                  <html class="ie7 no-js" lang="en">     <![endif]-->
 <!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="not-ie no-js" lang="en">  <!--<![endif]-->
-
 
 	<%@include file="include-head.jsp" %>
 
@@ -14,6 +13,40 @@
 		<div id="wrapper">
 		
 			<%@include file="include-login-top.jsp" %>
+			<%	
+		if(request.getSession().getAttribute("id_user")==null){
+			
+		
+%>
+
+			<div id="top-bar" class="top-bar">
+				<div class="container clearfix">
+					<div class="grid_12 mobile-nomargin">
+						Tem cadastro? <a href="#">Entre Aqui</a> Ou <a href="#">Registre-se!</a>
+					</div>
+				</div>
+			</div>
+			
+<%
+
+		}else
+			{
+
+%>
+			<div id="top-bar" class="top-bar">
+				<div class="container clearfix">
+					<div class="grid_12 mobile-nomargin">
+						<h5>Bem Vindo <font color="Green">${username }</font><br>
+						 Criando seu perfil clique aqui! <a href="#">Aqui</a><br>
+						Email: ${email }</h5>
+					</div>
+				</div>
+			</div>
+
+<%
+			}
+%>
+			
 			
 			<div class="main-box">
 				<!-- BEGIN HEADER -->
@@ -257,12 +290,19 @@
 								<h4>Parceiros</h4>
 							</div>
 							<div class="grid_10">
+							
+							
+							
+							
+<!-- 							2 -->
+<%-- <script type="text/javascript" src='<spring:url value="/js/ajax.js" --%>
+							
+							
 								<ul class="clients-list">
-									<li><a href="#"><img src="images/samples/client1.png" height="46" width="140" alt=""></a></li>
-									<li><a href="#"><img src="images/samples/client2.png" height="46" width="140" alt=""></a></li>
-									<li><a href="#"><img src="images/samples/client3.png" height="46" width="140" alt=""></a></li>
-									<li><a href="#"><img src="images/samples/client2.png" height="46" width="140" alt=""></a></li>
-									<li><a href="#"><img src="images/samples/client4.png" height="46" width="140" alt=""></a></li>
+									<li><a href="#"><img src="<spring:url value="/resources/images/samples/client1.png"/>" height="46" width="140" alt=""></a></li>
+									<li><a href="#"><img src="<spring:url value="/resources/images/samples/client2.png"/>" height="46" width="140" alt=""></a></li>
+									<li><a href="#"><img src="<spring:url value="/resources/images/samples/client3.png"/>" height="46" width="140" alt=""></a></li>
+									<li><a href="#"><img src="<spring:url value="/resources/images/samples/client4.png"/>" height="46" width="140" alt=""></a></li>
 								</ul>
 							</div>
 						</div>
@@ -275,96 +315,7 @@
 			<!-- END CONTENT WRAPPER -->
 			
 			<!-- BEGIN FOOTER -->
-			<footer id="footer" class="footer">
-				
-				<!-- Footer Widgets -->
-				<div class="widgets-footer">
-					<div class="container clearfix">
-						<div class="grid_3">
-							<!-- Text Widget -->
-							<div class=" tagcloud text-widget widget widget__footer">
-								<h3 class="widget-title">O que vai fazer uma <br>babá para sua família?</h3>
-								<div class="widget-content justify-text" >
-									<p>
-									<font>
-										<font>A primeira coisa que você e seu cônjuge precisa considerar é o que você espera sua babá para fazer por você. </font>
-										<font>Em outras palavras, qual é a sua descrição de trabalho? </font>
-										<font>Algumas coisas a considerar, além de cuidar de seus filhos são: Será que ela vai preparar as refeições? </font>
-									</font>
-									... <a href='#'>Ler Mais</a>
-									</p>
-								</div>
-							</div>
-							<!-- /Text Widget -->
-						</div>
-						<div class="grid_3">
-							<!-- Tags Widget -->
-							<div class="tagcloud widget widget__footer ">
-								<h3 class="widget-title">O que é preciso para se tornar uma babá</h3>
-								<div class="widget-content justify-text">
-								<p>
-									<font>
-										Está sendo uma babá a escolha da carreira certa para você? Talvez você cuidou de seus irmãos e irmãs mais novos, ou você 
-										sempre foi chamada para tomar conta de seus vizinhos, ou talvez você está apenas apaixonada sobre como trabalhar com 
-										crianças. Sendo uma babá
-									</font>
-									... <a href='#'>Ler Mais</a>
-									</p>
-								</div>
-							</div>
-							<!-- /Tags Widget -->
-						</div>
-						<div class="grid_3">
-							<!-- Recent Post Widget -->
-							<div class="recent-posts widget widget__footer">
-								<h3 class="widget-title">Blog BoaBabá!</h3>
-								<div class="widget-content">
-									<ul class="recent-posts-list">
-										<li><a href="#" class="title">Como pagar sua babá</a><span class="date">18 Outubro 2013</span></li>
-										<li><a href="#" class="title">O que é preciso para se tornar uma babá</a><span class="date">18 Outubro 2013</span></li>
-										<li><a href="#" class="title">O que vai fazer uma babá para sua família?</a><span class="date">18 Outubro 2013</span></li>
-									</ul>
-								</div>
-							</div>
-							<!-- /Recent Post Widget -->
-						</div>
-						<div class="grid_3">
-							<!-- Newsletter Widget -->
-							<div class="newsletter-widget widget widget__footer">
-								<h3 class="widget-title">Notícias</h3>
-								<div class="widget-content">
-									<p>Receba novidades no seu email do BoaBabá!</p>
-									<!-- Search Form -->
-									<form action="#" id="newsletter-form" class="inline-form inline-form__footer">
-										<input type="text" name="search-text" id="newsletter-text" placeholder="Digite seu Email...">
-										<div class="submit-wrapper">
-											<input type="submit" value="Enviar">
-										</div>
-									</form>
-									<!-- Search Form / End -->
-								</div>
-							</div>
-							<!-- /Newsletter Widget -->
-						</div>
-					</div>
-				</div>
-				<!-- /Footer Widgets -->
-				
-				<!-- Copyright -->
-				<div class="copyright">
-					<div class="container clearfix">
-						<div class="grid_12 mobile-nomargin">
-							<div class="clearfix">
-								<div class="copyright-primary">
-									BoaBabá &copy; 2013 <span class="separator">|</span><a href="#">Política de Privacidade</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- /Copyright -->
-				
-			</footer>
+			 <%@include file="include-footer.jsp" %>
 			<!-- END FOOTER -->
 		</div>
 			
@@ -377,26 +328,26 @@
 	================================================== -->
 	
 	<!-- initialize jQuery Library -->
-	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="<spring:url value="/resources/js/jquery-1.9.1.min.js"/>"></script>
 	<!-- jQuery migrate plugin -->
-	<script src="js/jquery-migrate-1.1.1.min.js"></script>
+	<script src="<spring:url value="/resources/js/jquery-migrate-1.1.1.min.js"/>"></script>
 	<!-- Modernizr -->
-	<script type="text/javascript" src="js/modernizr.custom.14583.js"></script>
+	<script type="text/javascript" src="<spring:url value="/resources/js/modernizr.custom.14583.js"/>"></script>
 	<!-- easing plugin -->
-	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="<spring:url value="/resources/js/jquery.easing.min.js"/>"></script>
 	<!-- Mobile Navigation -->
-	<script type="text/javascript" src="js/jquery.mobilemenu.js"></script>
+	<script type="text/javascript" src="<spring:url value="/resources/js/jquery.mobilemenu.js"/>"></script>
 	<!-- Navigation -->
-	<script type="text/javascript" src="js/jquery.superfish.js"></script>
+	<script type="text/javascript" src="<spring:url value="/resources/js/jquery.superfish.js"/>"></script>
 	<!-- Slider -->
-	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="<spring:url value="/resources/js/jquery.flexslider-min.js"/>"></script>
 	<!-- FitVideo -->
-	<script type="text/javascript" src="js/jquery.fitvids.js"></script>
+	<script type="text/javascript" src="<spring:url value="/resources/js/jquery.fitvids.js"/>"></script>
 	<!-- Flickr -->
-	<script type="text/javascript" src="js/jflickrfeed.js"></script>
+	<script type="text/javascript" src="<spring:url value="/resources/js/jflickrfeed.js"/>"></script>
 	
 	<!-- Custom -->
-	<script type="text/javascript" src="js/custom.js"></script>
+	<script type="text/javascript" src="<spring:url value="/resources/js/custom.js"/>"></script>
 	
 </body>
 </html>

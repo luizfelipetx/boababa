@@ -1,6 +1,6 @@
 			<!-- Main Navigation -->
 				<div class="container clearfix">
-					<div class="grid_12 mobile-nomargin">
+					<div class="grid_19 mobile-nomargin">
 						<nav class="primary clearfix">
 							<!-- Menu -->
 							<ul class="sf-menu">
@@ -20,7 +20,7 @@
 										<li><a href="about">Sobre Nós</a></li>
 <!-- 										<li><a href="services.html">Services</a></li> -->
 										<li><a href="columns.html">Columns</a></li>
-										<li><a href="register">Registre-se</a></li>
+										<li><a href="<spring:url value="/register"/>">Registre-se</a></li>
 <!-- 										<li><a href="typography.html">Typography</a></li> -->
 										<li><a href="faq">Perguntas Frequentes</a></li>
 									</ul>
@@ -31,20 +31,20 @@
 <!-- 										<li><a href="post.html">Single Post</a></li> -->
 <!-- 									</ul> -->
 								</li>
-								<li><a href="portfolio-3cols.html">Portfolio</a>
-									<ul>
-										<li><a href="portfolio-2cols.html">Portfolio 2 cols</a></li>
-										<li><a href="portfolio-3cols.html">Portfolio 3 cols</a></li>
-										<li><a href="portfolio-4cols.html">Portfolio 4 cols</a></li>
-										<li><a href="single-portfolio.html">Single Portfolio</a></li>
-									</ul>
+								<li><a href="portfolio-3cols.html">Novidades</a>
+<!-- 									<ul> -->
+<!-- 										<li><a href="portfolio-2cols.html">Portfolio 2 cols</a></li> -->
+<!-- 										<li><a href="portfolio-3cols.html">Portfolio 3 cols</a></li> -->
+<!-- 										<li><a href="portfolio-4cols.html">Portfolio 4 cols</a></li> -->
+<!-- 										<li><a href="single-portfolio.html">Single Portfolio</a></li> -->
+<!-- 									</ul> -->
 								</li>
-								<li><a href="contacts.html">Contacts</a></li>
+								<li><a href="contacts.html">Fale com Agente!</a></li>
 							</ul>
 							<!-- Menu / End -->
 							
 							<!-- Search Form -->
-							<form action="#" id="search-form" class="inline-form">
+							<form action="#" id="search-form" style="width:220px" class="inline-form">
 								<input type="text" name="search-text" id="search-text" placeholder="Busque no BoaBabá!">
 								<div class="submit-wrapper">
 									<i class="icon-search"></i>

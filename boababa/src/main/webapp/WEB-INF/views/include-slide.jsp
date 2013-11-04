@@ -1,9 +1,10 @@
+			<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 				<div class="container clearfix">
 					<div class="grid_8 mobile-nomargin">
 						<!-- BEGIN LOGO -->
 						<div id="logo" class="logo">
 							<!-- Image based Logo -->
-							<a href="index.html"><img src="images/logo.png" alt="Site Name" /></a> 
+						<a href="index.html"><img src="<spring:url value="/resources/images/logo.png"/>" alt="Site Name" /></a> 
 							<!-- Text based Logo 
 							<h1><a href="index.html"><strong>BABY</strong>sitter</a></h1> -->
 							
